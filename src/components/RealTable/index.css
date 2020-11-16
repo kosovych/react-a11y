@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 24px;
+}
+th,
+td {
+    border: 1px solid black;
+    word-break: break-all;
+}
+
+td img {
+    width: 64px;
+    height: 64px;
+}

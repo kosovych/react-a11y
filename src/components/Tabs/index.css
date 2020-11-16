@@ -1,0 +1,22 @@
+.tabs__tablist {
+    display: flex;
+    list-style: none;
+}
+.tabs__tab {
+    border: 3px solid black;
+    display: flex;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #eee;
+    outline-offset: 3px;
+}
+.tabs__tab--active {
+    border-bottom-color: #eee;
+}
+.tabs__tab:hover {
+    text-decoration: underline;
+}
+.tabs__tabpanel {
+    padding: 24px;
+    background-color: #eee;
+}

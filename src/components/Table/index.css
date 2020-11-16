@@ -1,0 +1,82 @@
+.table__body-cell,
+.table__head-cell {
+    min-width: 25%;
+    max-width: 25%;
+    padding: 8px;
+    border: 1px solid black;
+    word-break: break-all;
+}
+.table__body-cell:focus,
+.table__head-cell:focus {
+    outline: 3px solid blue;
+}
+.table__head-cell {
+    background-color: #ddd;
+}
+.table__body-cell img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 3px #ccc;
+}
+.table__body-row,
+.table__head-row {
+    display: flex;
+}
+.table__body-row:nth-child(even) {
+    background-color: #eee;
+}
+@media (max-width: 820px) {
+    .table__body-row {
+        display: grid;
+        padding: 4px;
+        grid-template-rows: 40px 40px 18px;
+        grid-template-columns: 80px 1fr;
+    }
+    .table__head {
+        display: none;
+    }
+    .table__body-cell {
+        min-width: auto;
+        max-width: none;
+        position: relative;
+        border: none;
+    }
+    .table__body-cell:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .table__body-cell:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .table__body-cell:nth-child(2),
+    .table__body-cell:nth-child(4) {
+        display: flex;
+        align-items: center;
+    }
+
+    .table__body-cell:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+    .table__body-cell a {
+        font-size: 0;
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+    .table__body-cell a:hover {
+        opacity: 0.5;
+    }
+    .table__body-cell a:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M467,61H45C20.218,61,0,81.196,0,106v300c0,24.72,20.128,45,45,45h422c24.72,0,45-20.128,45-45V106 C512,81.28,491.872,61,467,61z M460.786,91L256.954,294.833L51.359,91H460.786z M30,399.788V112.069l144.479,143.24L30,399.788z M51.213,421l144.57-144.57l50.657,50.222c5.864,5.814,15.327,5.795,21.167-0.046L317,277.213L460.787,421H51.213z M482,399.787 L338.213,256L482,112.212V399.787z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+}
